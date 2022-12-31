@@ -92,7 +92,7 @@ const moveToFinalResult = () => {
 	let initialValue = "";
 	finalResultPhaseTwo.A = ResultTablePhaseTwo.A.reduce(
 		(currentType, value) => {
-			if (total.A > value.min) {
+			if (total.A >= value.min) {
 				return value.type;
 			}
 			return currentType;
@@ -102,7 +102,7 @@ const moveToFinalResult = () => {
 	total.D = total.D * 2;
 	finalResultPhaseTwo.D = ResultTablePhaseTwo.D.reduce(
 		(currentType, value) => {
-			if (total.D > value.min) {
+			if (total.D >= value.min) {
 				return value.type;
 			}
 			return currentType;
@@ -112,7 +112,7 @@ const moveToFinalResult = () => {
 	total.S = total.S * 2;
 	finalResultPhaseTwo.S = ResultTablePhaseTwo.S.reduce(
 		(currentType, value) => {
-			if (total.S > value.min) {
+			if (total.S >= value.min) {
 				return value.type;
 			}
 			return currentType;
@@ -122,7 +122,12 @@ const moveToFinalResult = () => {
 	question.textContent = "Kết quả: ";
 	question.style.fontSize = "50px";
 	answersBox.style.fontSize = "36px";
-	answersBox.innerHTML = `Stress: ${finalResultPhaseTwo.S} ,Lo âu: ${finalResultPhaseTwo.A},Trầm cảm: ${finalResultPhaseTwo.D}`;
+	console.log("end");
+	answersBox.innerHTML = getResult(
+		finalResultPhaseTwo.S,
+		finalResultPhaseTwo.A,
+		finalResultPhaseTwo.D
+	);
 };
 
 const clickPhaseTwo = (e) => {
@@ -159,6 +164,29 @@ const getCard = (question) => {
     <p>${question}</p>
     </div>
     </div>`;
+};
+const getResult = (S, A, D) => {
+	console.log(Quotes);
+	var quotes = Quotes[Math.floor(Math.random() * Quotes.length)];
+	return `
+    <div class='result-box'>
+		<div class='result-warper'>
+			<div class='result-card'>
+				Stress: ${S}
+			</div>
+			<div class='result-card'>
+				Lo âu:${A}
+			</div>
+			<div class='result-card'>
+				Trầm cảm:${D}
+			</div>
+		</div>
+		<div class='quotes-warper'>
+			${quotes}
+		</div>
+    </div>
+	
+	`;
 };
 function getRandomInt() {
 	return Math.floor(Math.random() * 4) + 1;

@@ -199,3 +199,19 @@ body {
 		padding: 0 25px;
 	}
 }
+
+.result-warper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.result-warper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.quotes-warper {
+	margin: 45px 100px;
+}
