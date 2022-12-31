@@ -41,8 +41,15 @@ body {
 }
 
 .question {
-	margin: 18px 6rem;
-	font-size: 36px;
+	margin: 6px 1rem;
+	font-size: 32px;
+}
+
+@media (min-width: 768px) {
+	.question {
+		margin: 18px 6rem;
+		font-size: 36px;
+	}
 }
 
 .container {
@@ -179,6 +186,7 @@ body {
 	user-select: none;
 	-webkit-user-select: none;
 	touch-action: manipulation;
+	margin-bottom: 84px;
 }
 .button.hide {
 	display: none;
@@ -213,8 +221,14 @@ body {
 	align-items: center;
 }
 .quotes-warper {
-	margin: 45px 100px;
+	margin: 45px 10px;
 }
+@media (min-width: 768px) {
+	.quotes-warper {
+		margin: 45px 100px;
+	}
+}
+
 .copy-right {
 	font-family: "Roboto", sans-serif;
 
@@ -222,6 +236,11 @@ body {
 	bottom: 0;
 	right: 0;
 	/* width: 800px; */
-	font-size: 10px;
-	padding-left: 75px;
+	font-size: 8px;
+	padding-left: 120px;
+}
+@media (min-width: 768px) {
+	.copy-right {
+		padding-left: 0px;
+	}
 }

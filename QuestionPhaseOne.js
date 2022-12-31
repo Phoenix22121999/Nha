@@ -100,7 +100,7 @@ const QuestionPhaseOne = [
 		answers: [
 			{
 				content: "Có",
-				reply: "Bạn chia sẻ vấn đề bạn gặp phải thay vì cứ giữ kín trong lòng. Vì việc nói ra những điều chất chứa trong lòng giúp ta giải tỏa cảm xúc, tháo gỡ mọi khúc mắc và suy nghĩ lạc quan hơn",
+				reply: "Bạn nên chia sẻ vấn đề bạn gặp phải thay vì cứ giữ kín trong lòng. Vì việc nói ra những điều chất chứa trong lòng giúp ta giải tỏa cảm xúc, tháo gỡ mọi khúc mắc và suy nghĩ lạc quan hơn",
 			},
 			{
 				content: "Không có",
