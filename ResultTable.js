@@ -15,7 +15,7 @@ const ResultTable = `
 							là đúng
 						</div>
 						<div class="hight-light">
-							Sau khi bạn hoàn thành trả lời các câu hỏi hệ thống sẽ tự cộng điểm các câu hỏi lại, sau đó nhân 2 và so sánh
+							Sau khi bạn hoàn thành trả lời các câu hỏi, hệ thống sẽ tự cộng điểm các câu hỏi lại, sau đó nhân 2 và so sánh
 							với bảng kết quả sau:
 						</div>
 					</div>
