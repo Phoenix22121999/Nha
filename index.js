@@ -213,10 +213,9 @@ const oninit = () => {
 const onStart = () => {
 	nextButton.classList.add("hide");
 	nextButton.innerHTML = "Tiếp tục";
-	question.style.fontSize = "32px";
-	answersBox.style.padding = "0";
-	answersBox.style.textAlign = "initial";
-	answersBox.style.fontSize = "initial";
+	question.style.fontSize = "";
+	answersBox.style.padding = "";
+	answersBox.style.textAlign = "";
 	nextQuestion();
 	nextButton.removeEventListener("click", onStart);
 	nextButton.addEventListener("click", clickPhaseOne);
