@@ -283,3 +283,31 @@ body,
 .hight-light {
 	color: #ff597b;
 }
+.web-name-background {
+	background-image: url("./img/sign.png");
+	width: 400px;
+	aspect-ratio: 4/3;
+	object-fit: cover;
+	background-size: cover;
+	font-size: 36px;
+	transform-origin: 55% 00%;
+	animation: swing ease-in-out 1s infinite alternate;
+}
+.web-name {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -25%);
+	font-size: 90px;
+}
+@keyframes swing {
+	0% {
+		transform: rotate(3deg);
+	}
+	100% {
+		transform: rotate(-3deg);
+	}
+}

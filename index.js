@@ -199,10 +199,11 @@ function getRandomInt() {
 	return Math.floor(Math.random() * 4) + 1;
 }
 const oninit = () => {
-	question.textContent = "Rêveur";
+	// question.innerHTML = `<div class="web-name-background">Rêveur</div>`;
+	question.innerHTML = `<div class="web-name-background"><div class="web-name">Rêveur</div></div>`;
 	answersBox.textContent = `Bạn có đang ổn không? Hãy để chúng mình ôm bạn vào lòng nhé`;
 	nextButton.classList.remove("hide");
-	question.style.fontSize = "36px";
+	// question.style.fontSize = "36px";
 	answersBox.style.fontSize = "30px";
 	answersBox.style.padding = "10px";
 	answersBox.style.textAlign = "center";
