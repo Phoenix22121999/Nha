@@ -155,7 +155,6 @@ const clickPhaseOne = (e) => {
 		nextQuestion();
 	}
 };
-nextButton.addEventListener("click", clickPhaseOne);
 
 const showReply = (value) => {
 	// curentIndex++;
@@ -199,4 +198,28 @@ const getResult = (S, A, D) => {
 function getRandomInt() {
 	return Math.floor(Math.random() * 4) + 1;
 }
-nextQuestion();
+const oninit = () => {
+	question.textContent = "Rêveur";
+	answersBox.textContent = `Bạn có đang ổn không? Hãy để chúng mình ôm bạn vào lòng nhé`;
+	nextButton.classList.remove("hide");
+	question.style.fontSize = "36px";
+	answersBox.style.fontSize = "30px";
+	answersBox.style.padding = "10px";
+	answersBox.style.textAlign = "center";
+	nextButton.innerHTML = "Bắt đầu";
+	nextButton.addEventListener("click", onStart);
+};
+
+const onStart = () => {
+	nextButton.classList.add("hide");
+	nextButton.innerHTML = "Tiếp tục";
+	question.style.fontSize = "32px";
+	answersBox.style.padding = "0";
+	answersBox.style.textAlign = "initial";
+	answersBox.style.fontSize = "initial";
+	nextQuestion();
+	nextButton.removeEventListener("click", onStart);
+	nextButton.addEventListener("click", clickPhaseOne);
+};
+oninit();
+// nextQuestion();

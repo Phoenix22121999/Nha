@@ -26,7 +26,8 @@ html {
 	--sz: 300px;
 	--sz-min: 100px;
 }
-body {
+body,
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -38,6 +39,7 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	margin-bottom: 40px;
 }
 
 .question {
@@ -265,4 +267,7 @@ body {
 }
 .how-to-calculate-points .table {
 	border-collapse: collapse;
+}
+.welcome {
+	padding: 10px;
 }
