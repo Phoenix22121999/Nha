@@ -244,3 +244,25 @@ body {
 		padding-left: 0px;
 	}
 }
+.how-to-calculate-points {
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+}
+@media (min-width: 768px) {
+	.how-to-calculate-points {
+		width: 70%;
+	}
+}
+.how-to-calculate-points .how-to-text {
+	width: 100%;
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+.how-to-calculate-points .table td {
+	font-size: 22px;
+	border-bottom: 0.5px black solid;
+}
+.how-to-calculate-points .table {
+	border-collapse: collapse;
+}

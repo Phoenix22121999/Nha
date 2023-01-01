@@ -46,9 +46,18 @@ const moveToResult = () => {
 	question.style.fontSize = "50px";
 	question.textContent =
 		"Sau đây là bài trắc nghiệm DASS 21. Bài test (trắc nghiệm) DASS 21 (gồm 21 câu hỏi) là thang đo chẩn đoán khá phổ biến, chính xác và nhanh chóng về mức độ rối loạn lo âu – trầm cảm - stress mà bạn đọc có thể tự làm trong vài phút";
-	nextButton.innerHTML = "Bắt đầu";
+	nextButton.innerHTML = "Tiếp Tục";
 	nextButton.classList.remove("hide");
 	nextButton.removeEventListener("click", clickPhaseOne);
+	nextButton.addEventListener("click", moveToHowToCalc);
+};
+
+const moveToHowToCalc = () => {
+	question.textContent = "";
+	answersBox.innerHTML = ResultTable;
+	nextButton.innerHTML = "Bắt đầu";
+	nextButton.classList.remove("hide");
+	nextButton.removeEventListener("click", moveToHowToCalc);
 	nextButton.addEventListener("click", clickStartPhaseTwo);
 };
 
@@ -166,7 +175,6 @@ const getCard = (question) => {
     </div>`;
 };
 const getResult = (S, A, D) => {
-	console.log(Quotes);
 	var quotes = Quotes[Math.floor(Math.random() * Quotes.length)];
 	return `
     <div class='result-box'>
