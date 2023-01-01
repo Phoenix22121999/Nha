@@ -14,8 +14,10 @@ const ResultTable = `
 							• 3 - Hoàn toàn đúng với tôi, hoặc hầu hết thời gian
 							là đúng
 						</div>
-						Bạn cộng điểm các câu hỏi lại, sau đó nhân 2 và so sánh
-						với bảng kết quả sau:
+						<div class="hight-light">
+							Sau khi bạn hoàn thành trả lời các câu hỏi hệ thống sẽ tự cộng điểm các câu hỏi lại, sau đó nhân 2 và so sánh
+							với bảng kết quả sau:
+						</div>
 					</div>
 					<table class="table">
 						<thead>
@@ -59,4 +61,5 @@ const ResultTable = `
 							</tr>
 						</tbody>
 					</table>
+					
 				</div>`;
