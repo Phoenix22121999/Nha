@@ -2,6 +2,8 @@ const question = document.getElementsByClassName("question")[0];
 const answersBox = document.getElementsByClassName("answers-box")[0];
 const replyBox = document.getElementsByClassName("reply-box")[0];
 const nextButton = document.getElementsByClassName("button")[0];
+const copyRight = document.getElementsByClassName("copy-right")[0];
+const container = document.getElementsByClassName("container")[0];
 
 let curentIndex = 0;
 let curentAnswer = [];
@@ -44,6 +46,7 @@ const nextQuestion = () => {
 
 const moveToResult = () => {
 	question.style.fontSize = "50px";
+	question.style.textAlign = "center";
 	question.textContent =
 		"Sau đây là bài trắc nghiệm DASS 21. Bài test (trắc nghiệm) DASS 21 (gồm 21 câu hỏi) là thang đo chẩn đoán khá phổ biến, chính xác và nhanh chóng về mức độ rối loạn lo âu – trầm cảm - stress mà bạn đọc có thể tự làm trong vài phút";
 	nextButton.innerHTML = "Tiếp Tục";
@@ -67,6 +70,7 @@ const clickStartPhaseTwo = (e) => {
 	question.style.fontSize = "36px";
 
 	nextButton.classList.add("hide");
+	copyRight.classList.remove("hide");
 	nextQuestionTwo();
 
 	nextButton.removeEventListener("click", clickStartPhaseTwo);
@@ -131,12 +135,19 @@ const moveToFinalResult = () => {
 	question.textContent = "Kết quả: ";
 	question.style.fontSize = "50px";
 	answersBox.style.fontSize = "36px";
-	console.log("end");
+	nextButton.classList.remove("hide");
+	nextButton.textContent = "Tiếp tục";
+	nextButton.removeEventListener("click", nextQuestionTwo);
+	nextButton.addEventListener("click", showEndpage);
 	answersBox.innerHTML = getResult(
 		finalResultPhaseTwo.S,
 		finalResultPhaseTwo.A,
 		finalResultPhaseTwo.D
 	);
+};
+
+const showEndpage = () => {
+	container.innerHTML = EndPage;
 };
 
 const clickPhaseTwo = (e) => {
@@ -182,10 +193,10 @@ const getResult = (S, A, D) => {
 				Stress: ${S}
 			</div>
 			<div class='result-card'>
-				Lo âu:${A}
+				Lo âu: ${A}
 			</div>
 			<div class='result-card'>
-				Trầm cảm:${D}
+				Trầm cảm: ${D}
 			</div>
 		</div>
 		<div class='quotes-warper'>

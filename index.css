@@ -2,6 +2,10 @@
 	font-family: AmaticSC-Regular;
 	src: url("./AmaticSC-Regular.ttf");
 }
+@font-face {
+	font-family: chalkboard;
+	src: url("./SVN-Chalkboard.ttf");
+}
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
@@ -198,7 +202,7 @@ body,
 	touch-action: manipulation;
 	margin-bottom: 84px;
 }
-.button.hide {
+.hide {
 	display: none;
 }
 
@@ -285,7 +289,7 @@ body,
 }
 .web-name-background {
 	background-image: url("./img/sign.png");
-	width: 400px;
+	width: 300px;
 	aspect-ratio: 4/3;
 	object-fit: cover;
 	background-size: cover;
@@ -301,7 +305,15 @@ body,
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -25%);
-	font-size: 90px;
+	font-size: 80px;
+}
+@media (min-width: 768px) {
+	.web-name-background {
+		width: 400px;
+	}
+	.web-name {
+		font-size: 90px;
+	}
 }
 @keyframes swing {
 	0% {
@@ -309,5 +321,94 @@ body,
 	}
 	100% {
 		transform: rotate(-3deg);
+	}
+}
+
+.end-page {
+	width: 90%;
+	aspect-ratio: 8/7.6;
+	background-image: url("./img/board.png");
+	background-size: cover;
+}
+
+.end-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 80%;
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform-origin: center;
+	transform: translate(-50%, -30%) rotate(-2deg);
+}
+.thanks {
+	text-align: center;
+	font-family: "chalkboard", sans-serif;
+	font-size: 20px;
+	letter-spacing: 4px;
+}
+.talk {
+	margin: 10px 0;
+	font-size: 16px;
+}
+.credit {
+	font-size: 14px;
+}
+@media (min-width: 526px) {
+	.thanks {
+		font-size: 30px;
+	}
+	.talk {
+		font-size: 24px;
+	}
+	.credit {
+		font-size: 20px;
+	}
+}
+@media (min-width: 768px) {
+	.end-page {
+		width: 75%;
+	}
+	.thanks {
+		font-size: 40px;
+	}
+	.talk {
+		font-size: 30px;
+	}
+	.credit {
+		font-size: 24px;
+	}
+}
+
+@media (min-width: 1080px) {
+	.end-page {
+		width: 65%;
+	}
+	.thanks {
+		font-size: 60px;
+	}
+	.talk {
+		font-size: 40px;
+	}
+	.credit {
+		font-size: 30px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.end-page {
+		width: 45%;
+	}
+	.thanks {
+		font-size: 60px;
+	}
+	.talk {
+		font-size: 40px;
+	}
+	.credit {
+		font-size: 30px;
 	}
 }
