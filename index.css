@@ -384,7 +384,7 @@ body,
 
 @media (min-width: 924px) {
 	.end-page {
-		width: 65%;
+		width: 60%;
 	}
 	.thanks {
 		font-size: 40px;
@@ -399,7 +399,7 @@ body,
 
 @media (min-width: 1080px) {
 	.end-page {
-		width: 55%;
+		width: 45%;
 	}
 	.thanks {
 		font-size: 50px;
@@ -409,20 +409,5 @@ body,
 	}
 	.credit {
 		font-size: 24px;
-	}
-}
-
-@media (min-width: 1500px) {
-	.end-page {
-		width: 45%;
-	}
-	.thanks {
-		font-size: 60px;
-	}
-	.talk {
-		font-size: 40px;
-	}
-	.credit {
-		font-size: 30px;
 	}
 }
