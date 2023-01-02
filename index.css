@@ -383,22 +383,37 @@ body,
 	}
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 924px) {
 	.end-page {
 		width: 65%;
 	}
 	.thanks {
-		font-size: 60px;
-	}
-	.talk {
 		font-size: 40px;
 	}
-	.credit {
+	.talk {
 		font-size: 30px;
+	}
+	.credit {
+		font-size: 24px;
 	}
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1080px) {
+	.end-page {
+		width: 55%;
+	}
+	.thanks {
+		font-size: 50px;
+	}
+	.talk {
+		font-size: 32px;
+	}
+	.credit {
+		font-size: 24px;
+	}
+}
+
+@media (min-width: 1500px) {
 	.end-page {
 		width: 45%;
 	}
