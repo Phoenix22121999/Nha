@@ -3,8 +3,8 @@
 	src: url("./AmaticSC-Regular.ttf");
 }
 @font-face {
-	font-family: chalkboard;
-	src: url("./SVN-Chalkboard.ttf");
+	font-family: AmaticSC-Bold;
+	src: url("./AmaticSC-Bold.ttf");
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
@@ -346,9 +346,8 @@ body,
 }
 .thanks {
 	text-align: center;
-	font-family: "chalkboard", sans-serif;
+	font-family: "AmaticSC-Bold", sans-serif;
 	font-size: 20px;
-	letter-spacing: 4px;
 }
 .talk {
 	margin: 10px 0;
